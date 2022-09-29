@@ -1,0 +1,16 @@
+move(state(middle,onbox,middle,hasnot),
+     grasp,
+     state(middle,onbox,middle,has)).
+move(state(p,onbox,p,h),
+     climb,
+     state(p,onfloor,p,h)).
+move(state(p1,onfloor,p1,h),
+     push(p1,p2),
+     state(p2,onfloor,p2,h)).
+move(state(p1,onfloor,p1,h),
+     walk(p1,p2),
+     state(p2,onfloor,p2,h)).
+canget(state(_,_,_,has)).
+canget(state1):-
+	move(state1,_,state2),
+	canget(state2).
