@@ -1,0 +1,6 @@
+rainy(chennai).
+rainy(kadiri).
+rainy(talupula).
+cold(gvp).
+snowy(x):-cold(x),rainy(x).
+
